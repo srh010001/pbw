@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="login-container">
+        <img src="assets\logo_ut.svg" alt="Logo Universitas Terbuka" class="logo-ut" width="100px" height="120px">
+        <h2 class="welcome-text">Selamat Datang di SITTA</h2>
+        <h4>Sistem Informasi Pemesanan Bahan Ajar</h4>
+        <form id="login-form" aria-label="Formulir Masuk Aplikasi SITTA">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="email@ut.ac.id">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="password">
+            <button class="link-button" id="forgot-password-btn">Lupa password?</button>
+            <button type="submit" id="login-button">Masuk</button>
+        </form>
+
+        
+        <p>Belum punya akun? <button class="link-button" id="register-btn">Daftar</button></p>
+    </main>
+
+    <div id="forgot-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="forgot-modal-title">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="forgot-modal">&times;</span>
+            <h3 id="forgot-modal-title">Lupa Password</h3>
+            <p>Silakan hubungi Administrator SITTA untuk reset password.</p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal="register-modal">&times;</span>
+        <h3>Pendaftaran Akun</h3>
+
+        <form id="register-form">
+            <label for="register-nama">Nama Lengkap</label>
+            <input type="text" id="register-nama" required>
+
+            <label for="register-role">Role</label>
+            <p>UPPBJ-UT</p>
+            <input type="text" id="register-role" required>
+
+            <label for="register-lokasi">Lokasi</label>
+            <p>UPPBJ-Daerah</p>
+            <input type="text" id="register-lokasi" required>
+
+            <label for="register-email">Email</label>
+            <p>nama@ut.ac.id</p>
+            <input type="email" id="register-email" required>
+
+            <label for="register-password">Password</label>
+            <input
+                type="password"
+                id="register-password"
+                minlength="8"
+                pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}"
+                title="Password minimal 8 karakter dan harus mengandung huruf serta angka."
+                required
+            >
+
+            <label for="register-konfirmasi">Konfirmasi Password</label>
+            <input
+                type="password"
+                id="register-konfirmasi"
+                minlength="8"
+                required
+            >
+
+            <button type="submit">Buat Akun</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+  <p>Dibuat Oleh Sarah Hanifah 053132687</p>
+</div>
+    <script src="js\data.js"></script>
+    <script src="js\script.js"></script>
+</body>
+</html>
